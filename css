@@ -1,0 +1,175 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #2a0845, #6441a5, #fe4a49);
+    background-attachment: fixed;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabeçalho */
+.header {
+    background: rgba(42, 8, 69, 0.85);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ff75c3;
+}
+
+.logo span {
+    color: #b19ffb;
+}
+
+.header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.header nav a:hover {
+    color: #ff75c3;
+}
+
+/* Container Principal e Animação de Entrada */
+.container {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 0 20px;
+    flex: 1;
+}
+
+.card-post {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tag {
+    background: linear-gradient(45deg, #ff75c3, #9a75ff);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card-post h2 {
+    margin-top: 1.5rem;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.data {
+    font-size: 0.85rem;
+    color: #d1c4e9;
+    margin-bottom: 1.5rem;
+}
+
+.conteudo-post p {
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: #f3e5f5;
+}
+
+/* Seção do Botão de Likes */
+.like-container {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 1.5rem;
+}
+
+.btn-like {
+    background: linear-gradient(45deg, #ff2a85, #8a2be2);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 42, 133, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-like:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 6px 20px rgba(255, 42, 133, 0.6);
+}
+
+.btn-like:active {
+    transform: scale(0.95);
+}
+
+/* Classe adicionada via JavaScript para a animação de pulso */
+.animar-pulsar {
+    animation: pulsar 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes pulsar {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.25); }
+    100% { transform: scale(1); }
+}
+
+.contador {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ff75c3;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(42, 8, 69, 0.9);
+    font-size: 0.9rem;
+    color: #b19ffb;
+}
